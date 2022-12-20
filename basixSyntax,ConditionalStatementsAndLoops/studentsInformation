@@ -1,0 +1,6 @@
+function printStudentInfo(name, age, grade) {
+  // Format the grade to the second decimal point
+  const formattedGrade = grade.toFixed(2);
+  
+  console.log(`Name: ${name}, Age: ${age}, Grade: ${formattedGrade}`);
+}
