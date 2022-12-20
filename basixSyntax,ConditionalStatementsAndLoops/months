@@ -1,0 +1,14 @@
+function printMonth(monthNumber) {
+  // Define an array of month names
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  // Check if the month number is valid
+  if (monthNumber < 1 || monthNumber > 12) {
+    console.log("Error!");
+  } else {
+    console.log(monthNames[monthNumber - 1]);
+  }
+}
