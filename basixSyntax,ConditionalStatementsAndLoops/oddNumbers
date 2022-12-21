@@ -1,0 +1,11 @@
+function odd(input){
+    let n = input
+    let nums = n
+    let sum = 0
+    for (let index = 1; 0 < nums; index+=2) {
+        console.log(index)
+        sum+=index
+        nums--
+    }
+    console.log(`Sum: ${sum}`)
+}
