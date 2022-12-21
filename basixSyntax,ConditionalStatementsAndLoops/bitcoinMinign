@@ -1,0 +1,44 @@
+function bitcoinMining(input) {
+    let days = input.length
+    let currentDay = 0
+    let budget = 0
+    let bitcoins = 0
+    let firstBitcoin = 0
+    let thief = false
+    let i = 0
+    let currentSale = 0
+    while (days > 0) {
+        currentDay++
+        //1 Bitcoin	    11949.16 lv.
+        //1 g of gold	67.51 lv.
+        currentSale = input[i] * 67.51
+        if (currentDay % 3 == 0) {
+            currentSale *= 0.70
+            currentSale.toFixed(2)
+            thief = true
+        }
+        budget += currentSale
+        if (budget >= 11949.16) {
+            while (budget >= 11949.16) {
+
+                budget -= 11949.16
+                //2 8,303.84 
+                bitcoins++
+                if (firstBitcoin == 0) {
+                    firstBitcoin = currentDay
+                }
+            }
+        }
+
+        if (thief == true) {
+            currentDay = 0
+        }
+        days--
+        i++
+    }
+    console.log(`Bought bitcoins: ${bitcoins}`);
+    if (firstBitcoin != 0) {
+        console.log(`Day of the first purchased bitcoin: ${firstBitcoin}`)
+    }
+    console.log(`Left money: ${budget.toFixed(2)} lv.`)
+}
