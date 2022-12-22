@@ -1,0 +1,3 @@
+function nameConcatination(first, second, mid){
+    console.log(`${first}${mid}${second}`);
+}
