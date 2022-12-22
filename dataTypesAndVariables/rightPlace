@@ -1,0 +1,11 @@
+function checkMatch(word, character, comparison) {
+  // Replace the underscore in the word with the character
+  const modifiedWord = word.replace('_', character);
+  
+  // Check if the modified word matches the comparison string
+  if (modifiedWord === comparison) {
+    console.log("Matched");
+  } else {
+    console.log("Not Matched");
+  }
+}
