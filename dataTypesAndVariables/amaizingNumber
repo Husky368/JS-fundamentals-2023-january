@@ -1,0 +1,14 @@
+function amaizingNum(input) {
+    let word = input
+    word = word.toString()
+    let sum 
+    for (let index = 0; index < word.length; index++) {
+        sum += word[index]
+    }
+    let total = parseInt(sum)
+    let result = sum.toString().includes('9')
+    console.log(result ?
+        `${number} Amazing? True` :
+            `${number} Amazing? False`)
+}
+amaizingNum(333)
