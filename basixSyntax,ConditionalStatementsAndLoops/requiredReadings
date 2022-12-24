@@ -1,0 +1,5 @@
+function requiredReading(pages, pagesPerHour, days){
+    let totalTime = pages/pagesPerHour
+    let requiredHours = totalTime / days
+    console.log(requiredHours)
+}
