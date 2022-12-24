@@ -1,0 +1,23 @@
+function amaizingNum(input) {
+    let sumDigits = 0
+    let inputString = input.toString()
+    let digitTrue = false
+    for (let index = 0; index < inputString.length; index++) {
+        let digit = inputString[index]
+        sumDigits += Number(digit)
+    }
+    sumDigits = sumDigits.toString()
+    for(let i = 0; i < sumDigits.length; i++){
+        let digit = sumDigits[i]
+        if(digit==9){
+            digitTrue = true
+        }
+    }
+    if(digitTrue){
+        console.log(`${input} Amazing? True`);
+    }
+    else{
+        console.log(`${input} Amazing? False`);
+    }
+    
+}
