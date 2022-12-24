@@ -1,0 +1,30 @@
+function specialNumber(num) {
+    let special = false
+    let digit
+    let sum = 0 
+    for (let i = 1; i <= num; i++) {
+        i = i.toString()
+        for (m = 0; m < i.length; m++) {
+            digit = i[m]
+            digit = parseInt(digit)
+            sum += digit
+            if (sum == 5) {
+                special = true
+            }
+            else if (sum == 7) {
+                special = true
+            }
+            else if (sum == 11) {
+                special = true
+            }
+        }
+        if(special){
+            console.log(`${i} -> True`);
+        }
+        else{
+            console.log(`${i} -> False`);
+        }
+        sum = 0
+        special = false
+    }
+}
