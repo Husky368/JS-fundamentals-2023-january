@@ -1,0 +1,4 @@
+function charsToString(first,second,third){
+    let word =first+second+third
+    console.log(word);
+}
