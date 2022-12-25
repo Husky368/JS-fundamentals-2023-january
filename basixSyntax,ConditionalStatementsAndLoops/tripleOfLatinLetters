@@ -1,0 +1,259 @@
+function tripleLatinLetters(num) {
+    let digit = parseInt(num)
+    let firstLetter
+    let secondLetter
+    let thirdLetter
+    for (let first = 1; first <= digit; first++) {
+        //1 first
+        switch (first) {
+            // A, B, C, D, E, F6, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+            case 1:
+                firstLetter = "a"
+                break;
+            case 2:
+                firstLetter = "b"
+                break;
+            case 3:
+                firstLetter = "c"
+                break;
+            case 4:
+                firstLetter = "d"
+                break;
+            case 5:
+                firstLetter = "e"
+                break;
+            case 6:
+                firstLetter = "f"
+                break;
+            case 7:
+                firstLetter = "g"
+                break;
+            case 8:
+                firstLetter = "h"
+                break;
+            case 9:
+                firstLetter = "i"
+                break;
+            case 10:
+                firstLetter = "j"
+                break;
+            case 11:
+                firstLetter = "k"
+                break;
+            case 12:
+                firstLetter = "l"
+                break;
+            case 13:
+                firstLetter = "m"
+                break;
+            case 14:
+                firstLetter = "n"
+                break;
+            case 15:
+                firstLetter = "o"
+                break;
+            case 16:
+                firstLetter = "p"
+                break;
+            case 17:
+                firstLetter = "q"
+                break;
+            case 18:
+                firstLetter = "r"
+                break;
+            case 19:
+                firstLetter = "s"
+                break;
+            case 20:
+                firstLetter = "t"
+                break;
+            case 21:
+                firstLetter = "u"
+                break;
+            case 22:
+                firstLetter = "v"
+                break;
+            case 23:
+                firstLetter = "w"
+                break;
+            case 24:
+                firstLetter = "x"
+                break;
+            case 25:
+                firstLetter = "y"
+                break;
+            case 26:
+                firstLetter = "z"
+                break;
+        }
+        for (let second = 1; second <= digit; second++) {
+            //second 2
+            switch (second) {
+                // A, B, C, D, E, F6, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+                case 1:
+                    secondLetter = "a"
+                    break;
+                case 2:
+                    secondLetter = "b"
+                    break;
+                case 3:
+                    secondLetter = "c"
+                    break;
+                case 4:
+                    secondLetter = "d"
+                    break;
+                case 5:
+                    secondLetter = "e"
+                    break;
+                case 6:
+                    secondLetter = "f"
+                    break;
+                case 7:
+                    secondLetter = "g"
+                    break;
+                case 8:
+                    secondLetter = "h"
+                    break;
+                case 9:
+                    secondLetter = "i"
+                    break;
+                case 10:
+                    secondLetter = "j"
+                    break;
+                case 11:
+                    secondLetter = "k"
+                    break;
+                case 12:
+                    secondLetter = "l"
+                    break;
+                case 13:
+                    secondLetter = "m"
+                    break;
+                case 14:
+                    secondLetter = "n"
+                    break;
+                case 15:
+                    secondLetter = "o"
+                    break;
+                case 16:
+                    secondLetter = "p"
+                    break;
+                case 17:
+                    secondLetter = "q"
+                    break;
+                case 18:
+                    secondLetter = "r"
+                    break;
+                case 19:
+                    secondLetter = "s"
+                    break;
+                case 20:
+                    secondLetter = "t"
+                    break;
+                case 21:
+                    secondLetter = "u"
+                    break;
+                case 22:
+                    secondLetter = "v"
+                    break;
+                case 23:
+                    secondLetter = "w"
+                    break;
+                case 24:
+                    secondLetter = "x"
+                    break;
+                case 25:
+                    secondLetter = "y"
+                    break;
+                case 26:
+                    secondLetter = "z"
+                    break;
+            }
+            for (let third = 1; third <= digit; third++) {
+                //3 third
+                switch (third) {
+                    // A, B, C, D, E, F6, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+                    case 1:
+                        thirdLetter = "a"
+                        break;
+                    case 2:
+                        thirdLetter = "b"
+                        break;
+                    case 3:
+                        thirdLetter = "c"
+                        break;
+                    case 4:
+                        thirdLetter = "d"
+                        break;
+                    case 5:
+                        thirdLetter = "e"
+                        break;
+                    case 6:
+                        thirdLetter = "f"
+                        break;
+                    case 7:
+                        thirdLetter = "g"
+                        break;
+                    case 8:
+                        thirdLetter = "h"
+                        break;
+                    case 9:
+                        thirdLetter = "i"
+                        break;
+                    case 10:
+                        thirdLetter = "j"
+                        break;
+                    case 11:
+                        thirdLetter = "k"
+                        break;
+                    case 12:
+                        thirdLetter = "l"
+                        break;
+                    case 13:
+                        thirdLetter = "m"
+                        break;
+                    case 14:
+                        thirdLetter = "n"
+                        break;
+                    case 15:
+                        thirdLetter = "o"
+                        break;
+                    case 16:
+                        thirdLetter = "p"
+                        break;
+                    case 17:
+                        thirdLetter = "q"
+                        break;
+                    case 18:
+                        thirdLetter = "r"
+                        break;
+                    case 19:
+                        thirdLetter = "s"
+                        break;
+                    case 20:
+                        thirdLetter = "t"
+                        break;
+                    case 21:
+                        thirdLetter = "u"
+                        break;
+                    case 22:
+                        thirdLetter = "v"
+                        break;
+                    case 23:
+                        thirdLetter = "w"
+                        break;
+                    case 24:
+                        thirdLetter = "x"
+                        break;
+                    case 25:
+                        thirdLetter = "y"
+                        break;
+                    case 26:
+                        thirdLetter = "z"
+                        break;
+                }
+                console.log(`${firstLetter}${secondLetter}${thirdLetter}`)
+            }
+        }
+    }
+}
