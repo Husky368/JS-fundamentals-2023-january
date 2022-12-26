@@ -1,21 +1,16 @@
-function gladiatorExpenses(input){
-    let lostFights = input[0]
-    let helmetPrice = input[1]
-    let swordPrice = input[2]
-    let shieldPrice = input[3]
-    let armorPrice = input[4]
+function gladiatorExpenses(lostFights, helmetPrice, swordPrice, shieldPrice, armorPrice) {
     //•	Every second lost game, his helmet is broken.
     //•Every third lost game, his sword is broken.
     //•	When both his sword and helmet are broken in the same lost fight, his shield also breaks.
     //•	Every second time, when his shield brakes, his armor also needs to be repaired. 
-    let helmetBroken = (lostFights - (lostFights%2))/2
-    let swordBroken =  (lostFights - (lostFights%3))/3
-    let shieldBroken = (lostFights - (lostFights%6))/6
-    let armorBroken = (shieldBroken - (shieldBroken%2))/2
-    let helmetExpenses = helmetBroken*helmetPrice
-    let swordExpenses =  swordBroken*swordPrice
-    let shieldExpenses = shieldBroken*shieldPrice
-    let armorExpenses = armorBroken*armorPrice
-    let expenses = helmetExpenses + swordExpenses+shieldExpenses +armorExpenses
-    console.log(`Gladiator expenses: ${expenses} aureus`);
+    let helmetBroken = (lostFights - (lostFights % 2)) / 2
+    let swordBroken = (lostFights - (lostFights % 3)) / 3
+    let shieldBroken = (lostFights - (lostFights % 6)) / 6
+    let armorBroken = (shieldBroken - (shieldBroken % 2)) / 2
+    let helmetExpenses = helmetBroken * helmetPrice
+    let swordExpenses = swordBroken * swordPrice
+    let shieldExpenses = shieldBroken * shieldPrice
+    let armorExpenses = armorBroken * armorPrice
+    let expenses = helmetExpenses + swordExpenses + shieldExpenses + armorExpenses
+    console.log(`Gladiator expenses: ${expenses.toFixed(2)} aureus`);
 }
