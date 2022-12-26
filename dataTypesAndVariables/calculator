@@ -1,0 +1,16 @@
+function calculator(first, operation, second) {
+    let result
+    if (operation == "+") {
+        result = first + second
+    }
+    else if (operation == "-") {
+        result = first - second
+    }
+    else if (operation == "*") {
+        result = first * second
+    }
+    else{
+        result = first / second
+    }
+    console.log(result.toFixed(2));
+}
