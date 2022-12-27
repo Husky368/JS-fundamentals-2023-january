@@ -1,0 +1,22 @@
+function spiceMustFlow(spice) {
+    let underHundredSpice = false
+    let currentDay = Number(0)
+    let totalSpice = Number(0)
+    while (underHundredSpice == false) {
+        if (spice < 100) {
+            underHundredSpice = true
+            totalSpice -= Number(26)
+            break;
+        }
+        currentDay++
+        totalSpice += Number(spice)
+        totalSpice -= Number(26)
+        spice -= Number(10)
+        //we extract 111 spices and at the end of the shift, the workers consume 26, leaving 85. The yield drops by 10 to 101
+    }
+    if(totalSpice<0){
+        totalSpice=0
+    }
+    console.log(currentDay);
+    console.log(totalSpice)
+}
