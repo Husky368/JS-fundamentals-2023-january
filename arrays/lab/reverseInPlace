@@ -1,0 +1,7 @@
+function reverseInPlace(input){
+    let result = ""
+    for (let index = input.length-1; index >= 0 ; index--) {
+        result += " " + input[index]
+    }
+    console.log(result);
+}
