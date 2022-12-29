@@ -26,4 +26,3 @@ function addAndSubstract(input) {
     console.log(sumNewArr)
 
 }
-addAndSubstract([5, 15, 23, 56, 35])
