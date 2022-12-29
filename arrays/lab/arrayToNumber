@@ -21,3 +21,4 @@ function arrayToNumber(containerNumber) {
         }
     }
 }
+arrayToNumber([ 5, 14, 21, 59, 31 ])
