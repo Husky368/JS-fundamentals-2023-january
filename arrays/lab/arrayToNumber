@@ -1,0 +1,23 @@
+function arrayToNumber(containerNumber) {
+    let sum = 0
+    let lastNum = 0
+    let currentNumbers = []
+    let first = 0
+    let second = 0
+    let loop = 1
+    for (let index = 0; index <= currentNumbers.length == 1; index++) {
+        first = containerNumber[index]
+        second = containerNumber[index + 1]
+        if (first + second == NaN) {
+            first = currentNumbers[index]
+            second = currentNumbers[index+1]
+        }
+        currentNumbers[index] = Number(first + second)
+        if (index == containerNumber - loop) {
+            loop -= 1
+            if (loop <= 0) {
+                break;
+            }
+        }
+    }
+}
