@@ -1,0 +1,29 @@
+function addAndSubstract(input) {
+    let newArr = []
+    let sumInput = 0
+    let sumNewArr = 0
+    for (let index = 0; index <= input.length - 1; index++) {
+        let currentBox = index
+        let letter = input[index]
+        if(letter%2==0){
+            let resultPlus = letter + currentBox
+            newArr.push(resultPlus)
+        }
+        else{
+            let resultMinus = letter - currentBox
+            newArr.push(resultMinus)
+        }
+    }
+    for (let i = 0; i <= newArr.length-1; i++) {
+        //5 14 21 59 31
+        sumNewArr +=newArr[i]
+    }
+    for (let i = 0; i <= input.length-1; i++) {
+        sumInput +=input[i]
+    }
+    console.log(`[ ${newArr.join(", ")} ]`);
+    console.log(sumInput)
+    console.log(sumNewArr)
+
+}
+addAndSubstract([5, 15, 23, 56, 35])
