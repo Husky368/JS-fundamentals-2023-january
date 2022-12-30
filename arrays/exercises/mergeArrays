@@ -1,0 +1,16 @@
+function mergeArrays(firstArr, secondArr) {
+    let resultArr = []
+    for (let i = 0; i <= firstArr.length - 1; i++) {
+        if (i % 2 == 0) {
+            let first = Number(firstArr[i])
+            let second = Number(secondArr[i])
+            resultArr.push(first + second)
+        }
+        else {
+            let result = firstArr[i] + secondArr[i]
+            resultArr.push(result)
+        }
+    }
+    console.log(`${resultArr.join(" - ")}`);
+
+}
