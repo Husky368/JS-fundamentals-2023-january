@@ -1,0 +1,8 @@
+function commonElements(firstArr, secondArr) {
+    for (let i = 0; i <= firstArr.length - 1; i++) {
+        let element = firstArr[i]
+        if(secondArr.includes(element)){
+            console.log(element);
+        }
+    }
+}
