@@ -1,0 +1,36 @@
+function arrayRotation(arr, rotations) {
+    let newArr = []
+    let numberPassed = 0
+    let finished = false
+    let startPrinting = false
+    let allBreak = false
+    for (let i = 0; i <= rotations; i++) {
+        if (i == rotations) {
+            let starting = i
+            let over = i
+            if (starting >= arr.length) {
+                starting = starting - arr.length
+            }
+            if (over >= arr.length) {
+                over = over - arr.length
+            }
+            let first = 1
+            for (let printing = over; finished = true; printing++) {
+                //32 21 61 1
+                if (starting == printing && first != 1) {
+                    allBreak = true
+                    break;
+                }
+                newArr.push(arr[printing])
+                if (printing == arr.length - 1) {
+                    printing = -1
+                }
+                first++
+            }
+        }
+        if (allBreak) {
+            break;
+        }
+    }
+    console.log(`${newArr.join(" ")}`);
+}
