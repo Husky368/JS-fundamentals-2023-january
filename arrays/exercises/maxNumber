@@ -30,3 +30,4 @@ function maxNumber(array) {
     }
     console.log(`${numsArr.join(" ")}`)
 }
+maxNumber([41, 41, 41, 41])
