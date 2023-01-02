@@ -1,9 +1,32 @@
-function foo(arr) {
-    let index = "no"
-    arr.forEach((_, i) => {
-        const leftSum = arr.slice(0, i + 1).reduce((a, v) => a + v, 0)
-        const rightSum = arr.slice(i).reduce((a, v) => a + v, 0)
-        if (leftSum === rightSum) index = i
-    })
-    return index
+function equalSums(array) {
+    if(array.length==1){
+        console.log(0)
+    }
+    if (array.length >= 2) {
+        for (i = 0; i <= array.length - 1; i++) {
+            let leftSum = Number(0)
+            let rightSum = Number(0)
+            //[1, 2, 3, 3]
+            //leftSum
+            for (left = 0; left < i; left++) {
+                //leftSum
+                let digit = array[left]
+                leftSum+=digit
+            }
+            //rightSum
+            for (right = i+1; right <= array.length-1; right++) {
+                //rightSum
+                let digit = array[right]
+                rightSum+=digit
+            }
+            if(leftSum==rightSum){
+                console.log(i);
+                break;
+            }
+            if(i==array.length-1){
+                console.log("no");
+                break;
+            }
+        }
+    }
 }
