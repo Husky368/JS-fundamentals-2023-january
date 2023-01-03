@@ -1,0 +1,19 @@
+function magicSum(array, wanted) {
+    //[1, 7, 6, 2, 19, 23],
+    //8
+    let sum = []
+    let times = Number(0)
+    for (first = 0; first < array.length; first++) {
+        for (second = first+1; second < array.length; second++) {
+        //14, 20, 60, 13, 7, 19, 8]
+        //14 13
+        //20 7
+        //19 8
+            let numOne= array[first]
+            let numTwo = array[second]
+            if(numOne + numTwo==wanted){
+                console.log(`${numOne} ${numTwo}`)
+            }
+        }
+    }
+}
