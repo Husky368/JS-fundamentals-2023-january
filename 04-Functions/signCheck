@@ -1,4 +1,4 @@
-function wrongResult(numOne, numTwo, numThree) {
+function signCheck(numOne, numTwo, numThree) {
 
     let negativeCount = 0;
     let newArray = [numOne, numTwo, numThree];
