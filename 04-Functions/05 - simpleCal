@@ -1,0 +1,20 @@
+function simpleCal(first, second, action) {
+    switch (action) {
+        case 'multiply':
+            console.log(first * second)
+            break;
+        case 'divide':
+            console.log(first / second)
+            break;
+        case 'add':
+            console.log(first + second)
+            break;
+        case 'subtract':
+            console.log(first - second)
+            break;
+
+
+        default:
+            break;
+    }
+}
