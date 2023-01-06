@@ -1,0 +1,33 @@
+function oddAndEvenSum(number) {
+    let evenSum = 0
+    let oddSum = 0
+    let word = number.toString()
+    let wordLength = word.length
+    function sumOfEvenDigits(number) {
+        let sumEvenDigits = 0
+        //  1 0 0 0 4 3 5
+        //Odd sum = 9, Even sum = 4
+        for (i = 0; i <= wordLength; i++) {
+            let letter = word[i]
+            let digit = parseInt(letter)
+            if (digit % 2 == 0) {
+                sumEvenDigits += digit
+            }
+        }
+        return sumEvenDigits
+    }
+    function sumOfOddDigits(number) {
+        let sumOddDigits = 0
+        for (i = 0; i <= wordLength; i++) {
+            let letter = word[i]
+            let digit = parseInt(letter)
+            if (digit % 2 == 1) {
+                sumOddDigits += digit
+            }
+        }
+        return sumOddDigits
+    }
+    evenSum = sumOfEvenDigits()
+    oddSum = sumOfOddDigits()
+    console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
+}
