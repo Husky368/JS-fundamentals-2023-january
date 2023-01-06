@@ -1,0 +1,4 @@
+function smallestNum(first,second,last){
+    let smallest = Math.min(first,second,last)
+    console.log(smallest);
+}
