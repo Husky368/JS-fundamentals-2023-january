@@ -1,0 +1,10 @@
+function charsInRange(firstChar, secondChar) {
+    let charStart = Math.min(firstChar.charCodeAt(), secondChar.charCodeAt())
+    let charEnd = Math.max(firstChar.charCodeAt(), secondChar.charCodeAt())
+    let charArr = []
+    for (i = charStart + 1; i < charEnd; i++) {
+        let currentChar = String.fromCharCode(i)
+        charArr.push(currentChar)
+    }
+    console.log(charArr.join(" "));
+}
