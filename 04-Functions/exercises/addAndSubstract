@@ -1,0 +1,12 @@
+function addAndSubstract(first, second, last) {
+    function add(a, b) {
+        let sumOfTwoNumbers = a + b
+        return sumOfTwoNumbers
+    }
+    let sum = add(first,second)
+    function subtract(sumOfTwo, lastNum){
+        return sumOfTwo - lastNum
+    }
+    let result = subtract(sum,last)
+    console.log(result);
+}
