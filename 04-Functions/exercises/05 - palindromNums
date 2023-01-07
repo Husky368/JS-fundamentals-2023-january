@@ -1,0 +1,19 @@
+function palindromNums(numArr) {
+    for (let i = 0; i < numArr.length; i++) {
+        let currentNumber = numArr[i]
+        let reversedWord = ""
+        let currentNumWord =currentNumber.toString()
+        let last = currentNumWord.length - 1
+        for (k = last; k >= 0; k--) {
+            let currentDigit = currentNumWord[k]
+            let letter = currentDigit.toString()
+            reversedWord+=letter
+        }
+        if(reversedWord==currentNumWord){
+            console.log("true");
+        }
+        else{
+            console.log("false")
+        }
+    }
+}
