@@ -1,0 +1,57 @@
+function paswordValidation(password) {
+    function lengthCheck() {
+        if (password.length >= 6 && password.length <= 10) {
+            return true;
+        }
+        return false
+    }
+    function onlyLettersAndDigitsChech() {
+        let lettersCheck = true
+        let digitsCheck = true
+        for (let i = 0; i <= password.length - 1; i++) {
+            let curruntLetter = password[i]
+            if (isAlpha(curruntLetter)==false) {
+                lettersCheck = false
+            }
+            if (!isDigit(curruntLetter)) {
+                digitsCheck = false
+            }
+
+        }
+        if (lettersCheck && digitsCheck) {
+            return true
+        }
+        return false
+    }
+    function twoDigitsCheck(password) {
+        let numDigits = 0
+        for (i = 0; i < password.length; i++) {
+            let currentChar = password[i]
+            if(isDigit(currentChar)){
+                numDigits++
+            }
+            if(numDigits>=2){
+                return true
+            }
+        }
+        return false
+    }
+    let firstCheckResult = lengthCheck()
+    let secondCheckResult = onlyLettersAndDigitsChech()
+    let thrirdCheckResult = twoDigitsCheck()
+    if(firstCheckResult&&secondCheckResult&&thrirdCheckResult){
+        console.log("Password is valid");
+    }
+    else{
+        if(lengthCheck==false){
+            console.log("Password must be between 6 and 10 characters")
+        }
+        else if(onlyLettersAndDigitsChech==false){
+            console.log("Password must consist only of letters and digits")
+        }
+        else{
+            console.log("Password must have at least 2 digits")
+        }
+    }
+}
+paswordValidation('logIn')
