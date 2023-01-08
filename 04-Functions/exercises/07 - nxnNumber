@@ -1,0 +1,14 @@
+function nxnNumber(number) {
+    for (i = 1; i <= number; i++) {
+        let line = ""
+        for (k = 1; k <= number; k++) {
+            if(k<number){
+                line += number + " "
+            }
+            else{
+                line += number
+            }
+        }
+        console.log(line);
+    }
+}
