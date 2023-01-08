@@ -1,0 +1,29 @@
+function loadingBar(number) {
+    let completed = false
+    while (completed = true) {
+        if (number == 100) {
+            console.log("100% Complete!");
+            completed = true
+            break;
+        }
+        else {
+            let firstLine = number + "% ["
+            let secondLine = "Still loading..."
+            let percentSymbol = number / 10
+            for (i = 1; i <= percentSymbol; i++) {
+                firstLine += "%"
+            }
+            let dotSymbols = 10-percentSymbol
+            for(i=1;i<=dotSymbols;i++){
+                firstLine+= "."
+                if(i==dotSymbols){
+                    firstLine+="]"
+                }
+            }
+            console.log(firstLine)
+            console.log(secondLine)
+            completed = true
+            break;
+        }
+    }
+}
