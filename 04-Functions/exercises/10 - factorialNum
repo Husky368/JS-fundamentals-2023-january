@@ -16,3 +16,4 @@ function factorialNum(first, second) {
     let result = sum / second
     console.log(result.toFixed(2))
 }
+
