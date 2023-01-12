@@ -11,6 +11,9 @@ function smallestTwo(arr) {
             if(result[0]>digit){
                 result.unshift(digit)
             }
+            else if(result[1]>digit){
+                result[1] = digit
+            }
             else{
                 result.push(digit)
             }
