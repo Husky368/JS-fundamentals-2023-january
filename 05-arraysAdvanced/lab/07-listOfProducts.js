@@ -1,6 +1,10 @@
-function listOfProducts(array) {
-    array.sort((a, b) => a.localeCompare(b))
-    for (i = 0; i < array.length; i++) {
-        console.log(`${i + 1}.${array[i]}`);
+function arrayMapper(arr) {
+    let sorted = arr.sort()
+    let count = 1
+    let mapped = sorted.map(a => `${count++}.${a}`)
+    if(arr.length > 0){
+        console.log(mapped.join("\n"));
+    
     }
+   
 }
