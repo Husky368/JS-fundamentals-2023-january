@@ -78,12 +78,4 @@ function arrayManipulator(arrayNumbers, commands) {
                 break;
         }
     }
-    // 2 - length= 1
-    // 3 - length = 2
-    // 1  length = 3
-    // 1 bezkrayno
-} arrayManipulator(
-    [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2],
-    ["sumPairs", "sumPairs", "addMany 0 -1 -2 -3", "print"]
-)
-//3 3 3 3 3 3 
+}
