@@ -1,38 +1,26 @@
-function computerStore(declaration) {
-    let sum = 0
-    let taxes = 0
-    let times = 0
-    for (i = 0; i < declaration.length; i++) {
-        let current = declaration[i]
-        times++
-        if (current == 'special' || current == 'regular') {
-            if(times==1){
-                console.log('Invalid order!');
-                break;
-            }
-            if(current=='special'){
-                console.log("Congratulations you've just bought a new computer!")
-                console.log(`Price without taxes: ${(sum).toFixed(2)}$`)
-                console.log(`Taxes: ${taxes.toFixed(2)}$`)
-                console.log(`-----------`)
-                console.log(`Total price: ${((taxes + sum) * 0.9).toFixed(2)}$`)
-                break;
-            }
-            else{
-                console.log("Congratulations you've just bought a new computer!")
-                console.log(`Price without taxes: ${(sum).toFixed(2)}$`)
-                console.log(`Taxes: ${taxes.toFixed(2)}$`)
-                console.log(`-----------`)
-                console.log(`Total price: ${(taxes + sum).toFixed(2)}$`)
-                break;
-            }
+function computerStore(input) {
+    let total = 0;
+    let finalTotal = 0;
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] > 0) {
+            total += Number(input[i]);
+        } else if (input[i] < 0) {
+            console.log('Invalid price!')
         }
-        current = Number(current)
-        if (current <= 0) {
-            console.log('Invalid price!');
-            continue;
+        if (input[i] === 'special') {
+            finalTotal = (total + (total * 0.2)) * 0.9;
+        } else if (input[i] === 'regular') {
+            finalTotal = total + (total * 0.2)
         }
-        taxes += current * 0.2
-        sum += current
     }
+    if (total > 0) {
+        console.log(`Congratulations you\'ve just bought a new computer!`)
+        console.log(`Price without taxes: ${total.toFixed(2)}$`);
+        console.log(`Taxes: ${(total * 0.2).toFixed(2)}$`);
+        console.log('-----------');
+        console.log(`Total price: ${finalTotal.toFixed(2)}$`)
+    } else if (total <= 0) {
+        console.log('Invalid order!')
+    }
+ 
 }
