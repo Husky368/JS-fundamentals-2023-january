@@ -1,34 +1,29 @@
 function theLift(declaration) {
-    let turists = Number(declaration[0])
-    let wagons = declaration[1].split(" ").map(Number)
-
-    let turistFinish = false
-    let wagonsFinish = false
-    let times = 0
-
-    for (i = 0; i <= wagons.length; i++) {
-        let currWagon = wagons[i]
-        times++
-        let wagonNeedness = 4 - currWagon
-        if (times >= wagons.length && wagons[wagons.length - 1] == 4) {
-            console.log(`There isn't enough space! ${turists} people in a queue!`);
-            console.log(wagons.join(' '))
-            break;
-        }
-        if (wagonNeedness != 0 || currWagon == 0) {
-            if (wagonNeedness <= turists) {
-                turists -= wagonNeedness
-                wagons[i] = 4
+    let tourists = Number(declaration[0]);
+    let wagonNumbers = declaration[1].split(" ").map(Number);
+    for (let i = 0; i < wagonNumbers.length; i++) {
+        if (wagonNumbers[i] < 4) {
+            if (tourists >= 4 - wagonNumbers[i]) {
+                tourists -= 4 - wagonNumbers[i];
+                wagonNumbers[i] = 4;
+            } else {
+                wagonNumbers[i] += tourists;
+                tourists = 0;
             }
-            else {
-                wagons[i] = turists
-                turists -= turists
-            }
-        }
-        if (turists <= 0) {
-            console.log(`The lift has empty spots!`)
-            console.log(wagons.join(' '))
-            break;
         }
     }
+    let isNotFull = false;
+    for (let i = 0; i < wagonNumbers.length; i++) {
+        const curWagon = wagonNumbers[i];
+        if (curWagon < 4) {
+            isNotFull = true;
+        }
+    }
+    if (!isNotFull && tourists > 0) {
+        console.log(`There isn't enough space! ${tourists} people in a queue!`);
+    }
+    if (isNotFull && tourists == 0) {
+        console.log(`The lift has empty spots!`);
+    }
+    console.log(wagonNumbers.join(' '));
 }
