@@ -1,3 +1,4 @@
 function memoryGame(){
-    1
+    2
+    
 }memoryGame()
