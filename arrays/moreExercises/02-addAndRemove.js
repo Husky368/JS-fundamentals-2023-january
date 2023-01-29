@@ -1,14 +1,13 @@
-function addAndRemove(input) {
-    let number = Number(0)
-    let resultArr = []
-    for (i = 0; i < input.length; i++) {
-        number++
-        if(input[i]=="add"){
-            resultArr.push(number)
+function addRemove(input) {
+    let currentNum = 1;
+    let array = [];
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === "add") {
+            array.push(currentNum);
+        } else if (input[i] === "remove" && array.length > 0) {
+            array.pop();
         }
-        else{
-            resultArr.pop()
-        }
+        currentNum++;
     }
-    console.log(resultArr.join(" "))
+    console.log(array.length ? array.join(" ") : "Empty");
 }
