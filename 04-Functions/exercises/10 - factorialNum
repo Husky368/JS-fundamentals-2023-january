@@ -1,23 +1,11 @@
-function factorialNum(first, second) {
-    let sum = 0
-    let times = 0
-    for (i = first; i > 1; i--) {
-        times++
-        if (times == 1) {
-            sum += i * (i - 1)
-            i--
+function factorialDivision(firstNum, secondNum) {
+    return (factorial(firstNum) / factorial(secondNum)).toFixed(2);
+
+    function factorial(num) {
+        let factorial = 1;
+        for (let i = 1; i <= num; i++) {
+            factorial *= i;
         }
-        else {
-            sum *= i
-        }
+        return factorial;
     }
-    console.log((sum / second).toFixed(2))
 }
-factorialNum(7,
-    3
-)
-//7*6=  42
-//42*5= 210
-//210*4= 840
-//840*3=   2520
-//2640*2=    5040
