@@ -1,18 +1,23 @@
 function factorialNum(first, second) {
     let sum = 0
-    let last = 0
-    for (i = first - 1; i >= 2; i--) {
-        let current = 0
-        if (i == first-1) {
-            current = i * first
-            last = current
+    let times = 0
+    for (i = first; i > 1; i--) {
+        times++
+        if (times == 1) {
+            sum += i * (i - 1)
+            i--
         }
         else {
-            current = last * i
-            last = current
+            sum *= i
         }
-        sum = current
     }
-    let result = sum / second
-    console.log(result.toFixed(2))
+    console.log((sum / second).toFixed(2))
 }
+factorialNum(7,
+    3
+)
+//7*6=  42
+//42*5= 210
+//210*4= 840
+//840*3=   2520
+//2640*2=    5040
