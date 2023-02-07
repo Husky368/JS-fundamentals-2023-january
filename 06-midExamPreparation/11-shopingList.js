@@ -71,5 +71,3 @@ function shopingList(declaration) {
 "Unnecessary Milk",
 "Urgent Tomatoes",
 "Go Shopping!"])
-
-
