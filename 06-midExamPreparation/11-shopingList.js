@@ -67,7 +67,4 @@ function shopingList(declaration) {
                 break;
         }
     }
-} shopingList(["Tomatoes!Potatoes!Bread",
-"Unnecessary Milk",
-"Urgent Tomatoes",
-"Go Shopping!"])
+}
