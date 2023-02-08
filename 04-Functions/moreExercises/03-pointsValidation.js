@@ -24,3 +24,4 @@ function pointsValidation(coordinates) {
         console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`);
     }
 }
+
