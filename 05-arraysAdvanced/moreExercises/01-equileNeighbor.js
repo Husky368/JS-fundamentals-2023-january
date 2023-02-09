@@ -16,3 +16,5 @@ function equileNeighbor(declaration) {
     }
     console.log(resultNum)
 }
+
+
