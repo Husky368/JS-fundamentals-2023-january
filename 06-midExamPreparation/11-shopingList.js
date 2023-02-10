@@ -68,5 +68,3 @@ function shopingList(declaration) {
         }
     }
 }
-
-
