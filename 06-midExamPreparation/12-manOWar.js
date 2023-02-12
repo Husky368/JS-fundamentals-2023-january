@@ -8,8 +8,9 @@ function manOWar(declaration) {
         if (command == 'Retire') {
             //"Pirate ship status: {pirateShipSum}
             //Warship status: {warshipSum}"
-            let pirateShipSum = pirateShip.map(room => pirateShipSum + room)
-            let warShipSum = warShip.map(room => warShipSum + room)
+            let pirateShipSum = 0
+            pirateShipSum = pirateShip.reduce((room, sum) => sum += room)
+            let warShipSum = warShip.reduce((room,sum) => sum += room)
             console.log(`Pirate ship status: ${pirateShipSum}`)
             console.log(`Warship status: ${warShipSum}`)
             finish = true
@@ -21,7 +22,7 @@ function manOWar(declaration) {
             //"{count} sections need repair."
             let count = 0
             for (pirateRooms = 0; pirateRooms < pirateShip.length; pirateRooms++) {
-                let currentPercent = (maxDamage / pirateShip[pirateRooms]) * 100
+                let currentPercent = (pirateShip[pirateRooms] / maxDamage)*100
                 if (currentPercent < 20) {
                     count++
                 }
@@ -71,7 +72,7 @@ function manOWar(declaration) {
                 //The health of the section cannot exceed the maximum health capacity.
                 let indexRepair = Number(command[1])
                 let health = Number(command[2])
-                if (pirateShip.includes(indexRepair)) {
+                if (indexRepair >= 0 && indexRepair < pirateShip.length) {
                     pirateShip[indexRepair] += health
                     if (pirateShip[indexRepair] > maxDamage) {
                         pirateShip[indexRepair] = maxDamage
