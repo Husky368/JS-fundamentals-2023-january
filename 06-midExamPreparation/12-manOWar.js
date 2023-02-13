@@ -84,3 +84,4 @@ function manOWar(declaration) {
         }
     }
 }
+
