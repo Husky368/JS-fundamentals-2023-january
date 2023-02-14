@@ -53,17 +53,4 @@ function treasureHunt(declaration) {
                 break;
         }
     }
-    //     //•	"Loot {item1} {item2}…{itemn}":
-    // o	Pick up treasure loot along the way. Insert the items at the beginning of the chest. 
-    // o	If an item is already contained, don't insert it.
-
-    // •	"Drop {index}":
-    // o	Remove the loot at the given position and add it at the end of the treasure chest. 
-    // o	If the index is invalid, skip the command.
-
-    // •	"Steal {count}":
-    // o	Someone steals the last count loot items. If there are fewer items than the given count, remove as much as there are. 
-    // o	Print the stolen items separated by ", ":
-    // "{item1}, {item2}, {item3} … {itemn}"
-
 }
