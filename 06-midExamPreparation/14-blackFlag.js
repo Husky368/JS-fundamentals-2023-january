@@ -23,5 +23,4 @@ function blackFlag(declaration) {
     //"Collected only {percentage}% of the plunder."
     let percent = (sumPlunder/goalPlunder)*100
     return console.log(`Collected only ${percent.toFixed(2)}% of the plunder.`)
-    
 }
