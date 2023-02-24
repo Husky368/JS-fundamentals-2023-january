@@ -1,13 +1,13 @@
 function towns(declaration) {
-    //3 columns "Town", "Latitude" and "Longitude". 
     for (let input of declaration) {
-        let [town, Latitude, Longitude] = input.split(' | ')
+        let [town, latitude, longitude] = input.split(' | ')
+        latitude = Number(latitude)
+        longitude = Number(longitude)
         let townInfo = {
             town: town,
-            Latitude: Latitude,
-            Longitude: Longitude,
+            latitude: latitude.toFixed(2),
+            longitude: longitude.toFixed(2),
         };  
-        console.log(JSON.stringify(town))
+        console.log(townInfo)
     }
-} towns(['Sofia | 42.696552 | 23.32601',
-    'Beijing | 39.913818 | 116.363625'])
+}
