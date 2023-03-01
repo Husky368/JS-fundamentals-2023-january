@@ -4,8 +4,9 @@ function addresBill(input) {
         let [key,value] = line.split(':')
         object[key] = value
     }    
-    let sorted = Object.entries(object).sort(([key1,value1],[key2,value2]) => key1.localeCompare(key2))
+    let sorted = Object.keys(object)
+    sorted.sort((key1,key2) => key1.localeCompare(key2))
     for (const key in sorted) {
-        console.log(`${key} -> ${sorted[key]}`)
+        console.log(`${sorted[key]} -> ${object[sorted[key]]}`)
     }
 }
