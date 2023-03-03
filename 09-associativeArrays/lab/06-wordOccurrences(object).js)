@@ -1,0 +1,14 @@
+function wordOccurrences(input) {
+    let wordContainer = {}
+    for (const newWord of input) {
+        if (!wordContainer.hasOwnProperty(newWord)) {
+            wordContainer[newWord] = 1
+        } else {
+            wordContainer[newWord] += 1
+        }
+    }
+    let sorted = Object.entries(wordContainer).sort((a, b) => b[1]-a[1])
+    for (const [key,value] of sorted) {
+        console.log(`${key} -> ${value} times`)
+    }
+}
