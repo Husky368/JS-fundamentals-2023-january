@@ -1,23 +1,30 @@
 function piccolo(input) {
-    let garage = new Map();
-    for (const line of input) {
-        let [command, carNumber] = line.split(', ');
-        if (command == 'IN') {
-            garage.set(carNumber)
+ 
+    let parking = new Set();
+ 
+    for (let el of input) {
+        let arr = el.split(`, `)
+        if (arr[0] === `IN`) {
+            if (!parking.has(arr[1])) {
+                parking.add(arr[1]);
+            }
         } else {
-            garage.delete(carNumber)
+            parking.delete(arr[1])
+        }
+ 
+    }
+ 
+    let sorted = Array.from(parking).sort((a, b) => a.localeCompare(b));
+ 
+    if (sorted.length === 0) {
+        console.log(`Parking Lot is Empty`)
+    } else {
+        for (let el of sorted) {
+            console.log(el)
         }
     }
-    for (const carN of garage) {
-        let number = carN[0]
-        number = number[2]+number[3]+number[4]+number[5] 
-        garage.set(carN[0], Number(number))
-    }
-    let sort = Array.from(garage).sort((a, b) => a[1] - b[1])
-    if (sort.length == 0) {
-        return console.log("Parking Lot is Empty")
-    }
-    for (const key of sort) {
-        console.log(key[0])
-    }
+ 
+ 
+ 
+ 
 }
