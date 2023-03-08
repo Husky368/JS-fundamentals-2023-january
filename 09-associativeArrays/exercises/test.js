@@ -2,5 +2,5 @@ let mapObj = new Map();
 let a = "krasimir";
 let b = "yuliyanov";
 mapObj.set('firstname',a);
-mapObj.set('lastname',b);
+mapObj.set('firstname', mapObj[firstname].add(b))
 console.table(mapObj)
