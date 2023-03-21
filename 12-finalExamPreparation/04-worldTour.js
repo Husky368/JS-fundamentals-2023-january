@@ -27,26 +27,39 @@ function worldTour(input) {
             // o	Remove the elements of the string from the starting index to the end index (inclusive) if both indices are valid
             if (Number(ellement[1]) >= 0 && Number(ellement[2]) < tripPlan.length) {
                 let startIndex = Number(ellement[1]);
-                let endIndex = Number(ellement[2])
+                let endIndex = Number(ellement[2]);
                 let countLetters = Number(ellement[2]) - Number(ellement[1]);
                 tripPlan = tripPlan.split('');
-                tripPlan.splice(startIndex, countLetters);
+                tripPlan.splice(startIndex, countLetters+1);
                 tripPlan = tripPlan.join('');
             }
             console.log(tripPlan);
         }
-        else {
+        else if (ellement[0] == 'Switch') {
             // •	"Switch:{old_string}:{new_string}":
             // o	If the old string is in the initial string, replace it with the new one (all occurrences)
-            if(/ellement[2]/.test(tripPlan)){
-                console.log('2')
+            let oldWordSwitch = ellement[1];
+            let newWordSwitch = ellement[2];
+            let regex = new RegExp(oldWordSwitch)
+            while (regex.test(tripPlan)) {
+                let info = regex.exec(tripPlan);
+                // tripPlan.slice(info.index,info.index+oldWordSwitch.length)
+                tripPlan = tripPlan.split('');
+                tripPlan.splice(info.index, info.index + oldWordSwitch.length,newWordSwitch);
+                tripPlan = tripPlan.join('');
             }
+            console.log(tripPlan)
+        }
+        else{
+            console.log(`Ready for world tour! Planned stops: ${tripPlan}`)
+            break;
         }
     }
-    
-} worldTour(
-    (["Hawai::Cyprys-Greece",
-    "Add Stop:7:Rome",
-    "Remove Stop:11:16",
-    "Switch:Hawai:Bulgaria",
-    "Travel"]))
+
+} worldTour
+    ((["Albania:Bulgaria:Cyprus:Deuchland",
+    "Add Stop:3:Nigeria",
+    "Remove Stop:4:8",
+    "Switch:Albania: Azərbaycan",
+    "Travel"])
+    )
