@@ -4,7 +4,20 @@ function activationKeys(arr) {
         let info = line.split('>>>');
         let command = info.shift();
         if (command == 'Flip') {
-
+            let caseCommand = info.shift();
+            let startIndexFlip = Number(info.shift());
+            let endIndexFlip = Number(info.shift());
+            let word = code.substring(startIndexFlip,endIndexFlip);
+            if(caseCommand=='Upper'){
+                word = word.toUpperCase()
+            }
+            else{
+                word = word.toLowerCase();
+            }
+            code = code.split('');
+            code.splice(startIndexFlip,endIndexFlip-startIndexFlip,word)
+            code = code.join('');
+            console.log(code);
         }
         else if (command == 'Contains') {
             if (code.includes(info)) {
@@ -17,15 +30,13 @@ function activationKeys(arr) {
         else if (command == 'Slice') {
             let startIndex = Number(info.shift());
             let endIndex = Number(info.shift());
-            console.log(code)
             code = code.split('');
             code.splice(startIndex,(endIndex-startIndex))
             code = code.join('');
-            console.log(code)
-            console.log(code)
+            console.log(code);
         }
         else {
-
+            return console.log(`Your activation key is: ${code}`)
         }
     }
 } activationKeys(["abcdefghijklmnopqrstuvwxyz",
